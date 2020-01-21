@@ -1,0 +1,19 @@
+---
+- name: installation de git
+  apt: name=git state=latest
+
+- name: clean du dossier git
+  file: name=GestiTrain state=absent  
+  
+- name: pull du dossier GestiTrain
+  shell: "git clone https://github.com/cyrilCarlier/GestiTrain.git"
+
+
+- name: changement de proprietaire du dossier
+  file:
+     path: /home/cyril/GestiTrain
+     state: directory
+     recurse: yes
+     owner: cyril
+     group: cyril  
+...
