@@ -1,0 +1,7 @@
+---
+- name: Installation apache2
+  apt: name=apache2 state=latest
+
+- name: 
+  service: name=apache2 state=started enabled=true
+...

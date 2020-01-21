@@ -1,0 +1,13 @@
+---
+- name: Install MariaDB Server
+  apt: name=mariadb-server state=latest
+
+- name: installation du paquet uno mysql python
+  apt: name=python-mysqldb state=latest
+
+- name: installation du paquet dos  mysql python
+  apt: name=python3-pymysql state=latest  
+
+  #- name: demarrage de mariadb
+  #service: name=mariadb-server state=started enabled=true
+...

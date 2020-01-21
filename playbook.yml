@@ -1,0 +1,15 @@
+---
+# playbook pour l'installation de machine virtuelle
+ - hosts: all
+   remote_user: cyril
+   become: yes
+   
+   
+   roles:
+     - httpd
+     - php
+     - pma
+     - MySQL
+
+
+...

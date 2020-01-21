@@ -1,0 +1,5 @@
+---
+- name: installation de phpmyadmin
+  apt: name=phpmyadmin state=latest
+
+...
